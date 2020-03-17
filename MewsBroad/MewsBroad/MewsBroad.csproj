@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2097BA7B-D034-4674-ACD5-488D7A57D7C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MewsBroad</RootNamespace>
+    <AssemblyName>MewsBroad</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icoBroadcasting.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdengFx, Version=1.1.9.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\AdengFx.dll</HintPath>
+    </Reference>
+    <Reference Include="MewsDataMng, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\MewsDataMng.dll</HintPath>
+    </Reference>
+    <Reference Include="Mewsge, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Bin\Mewsge.dll</HintPath>
+    </Reference>
+    <Reference Include="MewsLog">
+      <HintPath>..\..\..\Bin\MewsLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Mewsmap">
+      <HintPath>..\..\..\Bin\Mewsmap.dll</HintPath>
+    </Reference>
+    <Reference Include="mewsprt">
+      <HintPath>..\..\..\Bin\mewsprt.dll</HintPath>
+    </Reference>
+    <Reference Include="mewsse">
+      <HintPath>..\..\..\Bin\mewsse.dll</HintPath>
+    </Reference>
+    <Reference Include="MewsSettingSync">
+      <HintPath>..\..\..\Control\MewsSettingSync\MewsSettingSync\bin\Debug\MewsSettingSync.dll</HintPath>
+    </Reference>
+    <Reference Include="Mewstcp">
+      <HintPath>..\..\..\Bin\Mewstcp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SystemTime">
+      <HintPath>..\..\..\Bin\SystemTime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoAlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutoAlertForm.designer.cs">
+      <DependentUpon>AutoAlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutoEditForm.designer.cs">
+      <DependentUpon>AutoEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardCutMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardCutMng.Designer.cs">
+      <DependentUpon>BoardCutMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardDataMng.cs" />
+    <Compile Include="BoardEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardEditForm.designer.cs">
+      <DependentUpon>BoardEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardMngForm.designer.cs">
+      <DependentUpon>BoardMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardViewForm.designer.cs">
+      <DependentUpon>BoardViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BroadCGMng.cs" />
+    <Compile Include="BroadInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BroadInfoForm.Designer.cs">
+      <DependentUpon>BroadInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BroadMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BroadMain.Designer.cs">
+      <DependentUpon>BroadMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BroadOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BroadOption.Designer.cs">
+      <DependentUpon>BroadOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BroadCGMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BroadCGMngForm.Designer.cs">
+      <DependentUpon>BroadCGMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientMng.cs" />
+    <Compile Include="GlassButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GlassButton.Designer.cs">
+      <DependentUpon>GlassButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupEditForm.designer.cs">
+      <DependentUpon>GroupEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupMngForm.designer.cs">
+      <DependentUpon>GroupMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LangPack.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderMode2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderMode2.designer.cs">
+      <DependentUpon>OrderMode2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderProgress.designer.cs">
+      <DependentUpon>OrderProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSelGrp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderSelGrp.designer.cs">
+      <DependentUpon>OrderSelGrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSelLive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderSelLive.designer.cs">
+      <DependentUpon>OrderSelLive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSelLiveSiren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderSelLiveSiren.Designer.cs">
+      <DependentUpon>OrderSelLiveSiren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSelMsg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderSelMsg.designer.cs">
+      <DependentUpon>OrderSelMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSelSiren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderSelSiren.designer.cs">
+      <DependentUpon>OrderSelSiren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SirenDataMng.cs" />
+    <Compile Include="SirenEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SirenEditForm.designer.cs">
+      <DependentUpon>SirenEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SirenMsgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SirenMsgForm.designer.cs">
+      <DependentUpon>SirenMsgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SortMng.cs" />
+    <Compile Include="StMsgDataMng.cs" />
+    <Compile Include="StMsgEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StMsgEditForm.designer.cs">
+      <DependentUpon>StMsgEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StMsgMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StMsgMngForm.designer.cs">
+      <DependentUpon>StMsgMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="AutoAlertForm.resx">
+      <DependentUpon>AutoAlertForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoEditForm.resx">
+      <DependentUpon>AutoEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardCutMng.resx">
+      <DependentUpon>BoardCutMng.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardEditForm.resx">
+      <DependentUpon>BoardEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardMngForm.resx">
+      <DependentUpon>BoardMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardViewForm.resx">
+      <DependentUpon>BoardViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BroadInfoForm.resx">
+      <DependentUpon>BroadInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BroadMain.resx">
+      <DependentUpon>BroadMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BroadOption.resx">
+      <DependentUpon>BroadOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BroadCGMngForm.resx">
+      <DependentUpon>BroadCGMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlassButton.resx">
+      <DependentUpon>GlassButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupEditForm.resx">
+      <DependentUpon>GroupEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupMngForm.resx">
+      <DependentUpon>GroupMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderMode2.resx">
+      <DependentUpon>OrderMode2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderProgress.resx">
+      <DependentUpon>OrderProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSelGrp.resx">
+      <DependentUpon>OrderSelGrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSelLive.resx">
+      <DependentUpon>OrderSelLive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSelLiveSiren.resx">
+      <DependentUpon>OrderSelLiveSiren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSelMsg.resx">
+      <DependentUpon>OrderSelMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSelSiren.resx">
+      <DependentUpon>OrderSelSiren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SirenEditForm.resx">
+      <DependentUpon>SirenEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SirenMsgForm.resx">
+      <DependentUpon>SirenMsgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StMsgEditForm.resx">
+      <DependentUpon>StMsgEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StMsgMngForm.resx">
+      <DependentUpon>StMsgMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topBroadcasting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popIconSetting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoBroadcasting.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconListRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconListGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgGroupActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgIndividual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgIndividualActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popIconMsgEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popIconGroupEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popIconCg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgInfoVer4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgInfoVer8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgInfoVer9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_ball_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_ball_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num1ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num2ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num3ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num4ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num5ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num6ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num7ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num8ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num9ver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgProgress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MewsCtrlPrt\MewsCtrlPrt.csproj">
+      <Project>{2078C55F-23F0-476C-9E08-C51B971E19E2}</Project>
+      <Name>MewsCtrlPrt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listImgNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgLiveActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_unchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgTitleLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgTitleLogoVer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgPopTitle497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgPopTitle497.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgPopTitle497.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgInfoVer10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgTitleGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgInfoVer10_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ucPrimary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ucSecond.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
